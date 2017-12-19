@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 let env = require('./env.port');
-connectionString = env.connection.mongodev;
+connectionString = env.connection.mlabs;
 mongoose.connect(connectionString);
 mongoose.connection.on('connection',()=>{
 

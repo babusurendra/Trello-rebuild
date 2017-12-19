@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced. -->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -17,4 +17,28 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
+-->
 
+<app-navbar></app-navbar>
+<!-- File input for the file-upload plugin, with special ng2-file-upload directive called ng2FileSelect -->
+<input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+<!-- button to trigger the file upload when submitted -->
+<button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="fileuploaded">
+      Upload with ng-2 file uploader
+</button>
+    <router-outlet>
+        
+        <!--<app-gallery></app-gallery>
+        <app-help></app-help>
+        <app-events></app-events>
+        <app-upcomingevents></app-upcomingevents>
+        <app-createnewevent></app-createnewevent>  -->
+      </router-outlet>
+  
+
+    
+<!-- <mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->
